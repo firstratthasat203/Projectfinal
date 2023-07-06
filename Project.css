@@ -1,0 +1,82 @@
+
+.container-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.background-gif {
+    font-family: 'Franklin Gothic Medium';
+    padding-top: 20px;
+    position: absolute;
+    background-image: url(./Tenaback.gif);
+    padding-inline: 20px;
+}
+
+header{
+    width: 100%;
+    background: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 10px; 
+    position: relative;
+}
+
+.Menu ,nav ul li a, label {
+    color: #fde4fd;
+}
+
+label{
+    display: none;
+}
+
+nav ul{
+    display: flex;
+    gap: 1rem;    
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+
+}
+@media screen and (max-width:480px) {
+    label{
+        display: block;
+    }
+    nav{
+        width: 150px;
+        position: absolute;
+        background: #fff;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    nav ul li a, nav label{
+        color: #111;
+    }
+
+    nav label{
+        text-align: right;
+
+    }
+    nav ul{
+        flex-direction: column;
+    }
+
+    input:checked ~ nav{
+        visibility: visible;
+        opacity: 1;
+
+    }
+    
+}
